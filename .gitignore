@@ -1,0 +1,113 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Icon? files
+Icon\r
+
+# Thumbnails and desktop files
+Thumbs.db
+Desktop.ini
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+env/
+ENV/
+.env
+.env.*
+
+# Build / distribution
+build/
+dist/
+out/
+.cache/
+
+# C / Embedded / QMK build artifacts
+*.o
+*.obj
+*.elf
+*.hex
+*.bin
+*.map
+*.dfu
+*.eep
+*.zip
+*.d
+*.lst
+*.a
+*.lib
+*.lst
+*.dSYM/
+obj_*/
+/.build/
+
+# QMK / firmware build directories (common names)
+obj_*/
+build_*/
+
+# KiCad
+*.kicad_pcb-bak
+*.kicad_sch~
+*.kicad_prl~
+*.kicad_pro~
+*-backups/
+**/pcb-backups/
+**/xiao-backups/
+**/fp-info-cache
+**/fp-lib-table
+**/sym-lib-table
+
+# CAD / FreeCAD backups
+*.FCBak
+*.FCStd~
+
+# Temporary / backup
+*.tmp
+*.bak
+*.backup
+*.log
+
+# Binary and other temporary files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# macOS Finder metadata
+.Spotlight-V100
+.Trashes
+
+# Secrets / local config
+.env.local
+.secrets
+.credentials
+
+# Misc
+# Throttle huge directories sometimes created by build or CI
+node_modules/
+.parcel-cache/
+
+# Ignore KiCad project folder (all variants / case-insensitive)
+kiCad/
+KiCad/
+kicad/
+
+# KiCad footprints / symbols / caches
+*.kicad_mod
+*.kicad_sym
+**/fp-info-cache/
+**/fp-lib-table/
+*-backups/
+*.kicad_pcb-bak

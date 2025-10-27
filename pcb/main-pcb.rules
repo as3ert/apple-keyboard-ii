@@ -1,0 +1,1948 @@
+
+(rules PCB Autorouter_PCB-main_2025-08-04 (2).dsn
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute off)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 1)
+    (layer_rule 1
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 6.2)
+    )
+    (layer_rule 2
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.8)
+    )
+  )
+  (rule
+    (width 1.004)
+    (clearance 0.606)
+    (clearance 0.502 (type smd_to_turn_gap))
+    (clearance 0.606 (type smd))
+    (clearance 0.6 (type "SW80_2"))
+    (clearance 0.6 (type ROW4))
+    (clearance 0.6 (type GND))
+    (clearance 0.6 (type VCC))
+    (clearance 0.6 (type COL17))
+    (clearance 0.6 (type COL16))
+    (clearance 0.6 (type COL15))
+    (clearance 0.6 (type COL14))
+    (clearance 0.6 (type COL13))
+    (clearance 0.6 (type COL12))
+    (clearance 0.6 (type COL11))
+    (clearance 0.6 (type COL10))
+    (clearance 0.6 (type COL9))
+    (clearance 0.6 (type COL8))
+    (clearance 0.6 (type COL7))
+    (clearance 0.6 (type COL6))
+    (clearance 0.6 (type COL5))
+    (clearance 0.6 (type COL4))
+    (clearance 0.6 (type COL3))
+    (clearance 0.6 (type COL2))
+    (clearance 0.6 (type COL1))
+    (clearance 0.6 (type COL0))
+    (clearance 0.6 (type ROW3))
+    (clearance 0.6 (type ROW2))
+    (clearance 0.6 (type ROW1))
+    (clearance 0.6 (type ROW0))
+    (clearance 0.6 (type "SW1_2"))
+    (clearance 0.6 (type "D2_2"))
+    (clearance 0.6 (type "D3_2"))
+    (clearance 0.6 (type "D4_2"))
+    (clearance 0.6 (type "D5_2"))
+    (clearance 0.6 (type "D6_2"))
+    (clearance 0.6 (type "D7_2"))
+    (clearance 0.6 (type "D8_2"))
+    (clearance 0.6 (type "D9_2"))
+    (clearance 0.6 (type "D10_2"))
+    (clearance 0.6 (type "D11_2"))
+    (clearance 0.6 (type "D12_2"))
+    (clearance 0.6 (type "D13_2"))
+    (clearance 0.6 (type "D14_2"))
+    (clearance 0.6 (type "D15_2"))
+    (clearance 0.6 (type "D16_2"))
+    (clearance 0.6 (type "D17_2"))
+    (clearance 0.6 (type "D18_2"))
+    (clearance 0.6 (type "D19_2"))
+    (clearance 0.6 (type "D20_2"))
+    (clearance 0.6 (type "D21_2"))
+    (clearance 0.6 (type "D22_2"))
+    (clearance 0.6 (type "D23_2"))
+    (clearance 0.6 (type "D24_2"))
+    (clearance 0.6 (type "D25_2"))
+    (clearance 0.6 (type "D26_2"))
+    (clearance 0.6 (type "D27_2"))
+    (clearance 0.6 (type "D28_2"))
+    (clearance 0.6 (type "D29_2"))
+    (clearance 0.6 (type "D30_2"))
+    (clearance 0.6 (type "D31_2"))
+    (clearance 0.6 (type "D32_2"))
+    (clearance 0.6 (type "D33_2"))
+    (clearance 0.6 (type "D34_2"))
+    (clearance 0.6 (type "D35_2"))
+    (clearance 0.6 (type "D36_2"))
+    (clearance 0.6 (type "D37_2"))
+    (clearance 0.6 (type "D38_2"))
+    (clearance 0.6 (type "D39_2"))
+    (clearance 0.6 (type "D40_2"))
+    (clearance 0.6 (type "D41_2"))
+    (clearance 0.6 (type "D42_2"))
+    (clearance 0.6 (type "D43_2"))
+    (clearance 0.6 (type "D44_2"))
+    (clearance 0.6 (type "D45_2"))
+    (clearance 0.6 (type "D46_2"))
+    (clearance 0.6 (type "D47_2"))
+    (clearance 0.6 (type "D48_2"))
+    (clearance 0.6 (type "D49_2"))
+    (clearance 0.6 (type "D50_2"))
+    (clearance 0.6 (type "D51_2"))
+    (clearance 0.6 (type "D52_2"))
+    (clearance 0.6 (type "D53_2"))
+    (clearance 0.6 (type "D54_2"))
+    (clearance 0.6 (type "D55_2"))
+    (clearance 0.6 (type "D56_2"))
+    (clearance 0.6 (type "D57_2"))
+    (clearance 0.6 (type "D58_2"))
+    (clearance 0.6 (type "D59_2"))
+    (clearance 0.6 (type "D60_2"))
+    (clearance 0.6 (type "D61_2"))
+    (clearance 0.6 (type "D62_2"))
+    (clearance 0.6 (type "D63_2"))
+    (clearance 0.6 (type "D64_2"))
+    (clearance 0.6 (type "D65_2"))
+    (clearance 0.6 (type "D66_2"))
+    (clearance 0.6 (type "D67_2"))
+    (clearance 0.6 (type "D68_2"))
+    (clearance 0.6 (type "D69_2"))
+    (clearance 0.6 (type "D70_2"))
+    (clearance 0.6 (type "D71_2"))
+    (clearance 0.6 (type "D72_2"))
+    (clearance 0.6 (type "D73_2"))
+    (clearance 0.6 (type "D74_2"))
+    (clearance 0.6 (type "D75_2"))
+    (clearance 0.6 (type "D76_2"))
+    (clearance 0.6 (type "D77_2"))
+    (clearance 0.6 (type "D78_2"))
+    (clearance 0.6 (type "D79_2"))
+  )
+  (padstack via0
+    (shape
+      (circle 1 2.4 0.0 0.0)
+    )
+    (shape
+      (circle 2 2.4 0.0 0.0)
+    )
+  )
+  (via 
+    via0 via0 default
+  )
+  (via 
+    "via0-SW80_2" via0 "SW80_2"
+  )
+  (via 
+    "via0-ROW4" via0 ROW4
+  )
+  (via 
+    "via0-GND" via0 GND
+  )
+  (via 
+    "via0-VCC" via0 VCC
+  )
+  (via 
+    "via0-COL17" via0 COL17
+  )
+  (via 
+    "via0-COL16" via0 COL16
+  )
+  (via 
+    "via0-COL15" via0 COL15
+  )
+  (via 
+    "via0-COL14" via0 COL14
+  )
+  (via 
+    "via0-COL13" via0 COL13
+  )
+  (via 
+    "via0-COL12" via0 COL12
+  )
+  (via 
+    "via0-COL11" via0 COL11
+  )
+  (via 
+    "via0-COL10" via0 COL10
+  )
+  (via 
+    "via0-COL9" via0 COL9
+  )
+  (via 
+    "via0-COL8" via0 COL8
+  )
+  (via 
+    "via0-COL7" via0 COL7
+  )
+  (via 
+    "via0-COL6" via0 COL6
+  )
+  (via 
+    "via0-COL5" via0 COL5
+  )
+  (via 
+    "via0-COL4" via0 COL4
+  )
+  (via 
+    "via0-COL3" via0 COL3
+  )
+  (via 
+    "via0-COL2" via0 COL2
+  )
+  (via 
+    "via0-COL1" via0 COL1
+  )
+  (via 
+    "via0-COL0" via0 COL0
+  )
+  (via 
+    "via0-ROW3" via0 ROW3
+  )
+  (via 
+    "via0-ROW2" via0 ROW2
+  )
+  (via 
+    "via0-ROW1" via0 ROW1
+  )
+  (via 
+    "via0-ROW0" via0 ROW0
+  )
+  (via 
+    "via0-SW1_2" via0 "SW1_2"
+  )
+  (via 
+    "via0-D2_2" via0 "D2_2"
+  )
+  (via 
+    "via0-D3_2" via0 "D3_2"
+  )
+  (via 
+    "via0-D4_2" via0 "D4_2"
+  )
+  (via 
+    "via0-D5_2" via0 "D5_2"
+  )
+  (via 
+    "via0-D6_2" via0 "D6_2"
+  )
+  (via 
+    "via0-D7_2" via0 "D7_2"
+  )
+  (via 
+    "via0-D8_2" via0 "D8_2"
+  )
+  (via 
+    "via0-D9_2" via0 "D9_2"
+  )
+  (via 
+    "via0-D10_2" via0 "D10_2"
+  )
+  (via 
+    "via0-D11_2" via0 "D11_2"
+  )
+  (via 
+    "via0-D12_2" via0 "D12_2"
+  )
+  (via 
+    "via0-D13_2" via0 "D13_2"
+  )
+  (via 
+    "via0-D14_2" via0 "D14_2"
+  )
+  (via 
+    "via0-D15_2" via0 "D15_2"
+  )
+  (via 
+    "via0-D16_2" via0 "D16_2"
+  )
+  (via 
+    "via0-D17_2" via0 "D17_2"
+  )
+  (via 
+    "via0-D18_2" via0 "D18_2"
+  )
+  (via 
+    "via0-D19_2" via0 "D19_2"
+  )
+  (via 
+    "via0-D20_2" via0 "D20_2"
+  )
+  (via 
+    "via0-D21_2" via0 "D21_2"
+  )
+  (via 
+    "via0-D22_2" via0 "D22_2"
+  )
+  (via 
+    "via0-D23_2" via0 "D23_2"
+  )
+  (via 
+    "via0-D24_2" via0 "D24_2"
+  )
+  (via 
+    "via0-D25_2" via0 "D25_2"
+  )
+  (via 
+    "via0-D26_2" via0 "D26_2"
+  )
+  (via 
+    "via0-D27_2" via0 "D27_2"
+  )
+  (via 
+    "via0-D28_2" via0 "D28_2"
+  )
+  (via 
+    "via0-D29_2" via0 "D29_2"
+  )
+  (via 
+    "via0-D30_2" via0 "D30_2"
+  )
+  (via 
+    "via0-D31_2" via0 "D31_2"
+  )
+  (via 
+    "via0-D32_2" via0 "D32_2"
+  )
+  (via 
+    "via0-D33_2" via0 "D33_2"
+  )
+  (via 
+    "via0-D34_2" via0 "D34_2"
+  )
+  (via 
+    "via0-D35_2" via0 "D35_2"
+  )
+  (via 
+    "via0-D36_2" via0 "D36_2"
+  )
+  (via 
+    "via0-D37_2" via0 "D37_2"
+  )
+  (via 
+    "via0-D38_2" via0 "D38_2"
+  )
+  (via 
+    "via0-D39_2" via0 "D39_2"
+  )
+  (via 
+    "via0-D40_2" via0 "D40_2"
+  )
+  (via 
+    "via0-D41_2" via0 "D41_2"
+  )
+  (via 
+    "via0-D42_2" via0 "D42_2"
+  )
+  (via 
+    "via0-D43_2" via0 "D43_2"
+  )
+  (via 
+    "via0-D44_2" via0 "D44_2"
+  )
+  (via 
+    "via0-D45_2" via0 "D45_2"
+  )
+  (via 
+    "via0-D46_2" via0 "D46_2"
+  )
+  (via 
+    "via0-D47_2" via0 "D47_2"
+  )
+  (via 
+    "via0-D48_2" via0 "D48_2"
+  )
+  (via 
+    "via0-D49_2" via0 "D49_2"
+  )
+  (via 
+    "via0-D50_2" via0 "D50_2"
+  )
+  (via 
+    "via0-D51_2" via0 "D51_2"
+  )
+  (via 
+    "via0-D52_2" via0 "D52_2"
+  )
+  (via 
+    "via0-D53_2" via0 "D53_2"
+  )
+  (via 
+    "via0-D54_2" via0 "D54_2"
+  )
+  (via 
+    "via0-D55_2" via0 "D55_2"
+  )
+  (via 
+    "via0-D56_2" via0 "D56_2"
+  )
+  (via 
+    "via0-D57_2" via0 "D57_2"
+  )
+  (via 
+    "via0-D58_2" via0 "D58_2"
+  )
+  (via 
+    "via0-D59_2" via0 "D59_2"
+  )
+  (via 
+    "via0-D60_2" via0 "D60_2"
+  )
+  (via 
+    "via0-D61_2" via0 "D61_2"
+  )
+  (via 
+    "via0-D62_2" via0 "D62_2"
+  )
+  (via 
+    "via0-D63_2" via0 "D63_2"
+  )
+  (via 
+    "via0-D64_2" via0 "D64_2"
+  )
+  (via 
+    "via0-D65_2" via0 "D65_2"
+  )
+  (via 
+    "via0-D66_2" via0 "D66_2"
+  )
+  (via 
+    "via0-D67_2" via0 "D67_2"
+  )
+  (via 
+    "via0-D68_2" via0 "D68_2"
+  )
+  (via 
+    "via0-D69_2" via0 "D69_2"
+  )
+  (via 
+    "via0-D70_2" via0 "D70_2"
+  )
+  (via 
+    "via0-D71_2" via0 "D71_2"
+  )
+  (via 
+    "via0-D72_2" via0 "D72_2"
+  )
+  (via 
+    "via0-D73_2" via0 "D73_2"
+  )
+  (via 
+    "via0-D74_2" via0 "D74_2"
+  )
+  (via 
+    "via0-D75_2" via0 "D75_2"
+  )
+  (via 
+    "via0-D76_2" via0 "D76_2"
+  )
+  (via 
+    "via0-D77_2" via0 "D77_2"
+  )
+  (via 
+    "via0-D78_2" via0 "D78_2"
+  )
+  (via 
+    "via0-D79_2" via0 "D79_2"
+  )
+  (via_rule
+    default via0
+  )
+  (via_rule
+    "SW80_2" "via0-SW80_2"
+  )
+  (via_rule
+    ROW4 "via0-ROW4"
+  )
+  (via_rule
+    GND "via0-GND"
+  )
+  (via_rule
+    VCC "via0-VCC"
+  )
+  (via_rule
+    COL17 "via0-COL17"
+  )
+  (via_rule
+    COL16 "via0-COL16"
+  )
+  (via_rule
+    COL15 "via0-COL15"
+  )
+  (via_rule
+    COL14 "via0-COL14"
+  )
+  (via_rule
+    COL13 "via0-COL13"
+  )
+  (via_rule
+    COL12 "via0-COL12"
+  )
+  (via_rule
+    COL11 "via0-COL11"
+  )
+  (via_rule
+    COL10 "via0-COL10"
+  )
+  (via_rule
+    COL9 "via0-COL9"
+  )
+  (via_rule
+    COL8 "via0-COL8"
+  )
+  (via_rule
+    COL7 "via0-COL7"
+  )
+  (via_rule
+    COL6 "via0-COL6"
+  )
+  (via_rule
+    COL5 "via0-COL5"
+  )
+  (via_rule
+    COL4 "via0-COL4"
+  )
+  (via_rule
+    COL3 "via0-COL3"
+  )
+  (via_rule
+    COL2 "via0-COL2"
+  )
+  (via_rule
+    COL1 "via0-COL1"
+  )
+  (via_rule
+    COL0 "via0-COL0"
+  )
+  (via_rule
+    ROW3 "via0-ROW3"
+  )
+  (via_rule
+    ROW2 "via0-ROW2"
+  )
+  (via_rule
+    ROW1 "via0-ROW1"
+  )
+  (via_rule
+    ROW0 "via0-ROW0"
+  )
+  (via_rule
+    "SW1_2" "via0-SW1_2"
+  )
+  (via_rule
+    "D2_2" "via0-D2_2"
+  )
+  (via_rule
+    "D3_2" "via0-D3_2"
+  )
+  (via_rule
+    "D4_2" "via0-D4_2"
+  )
+  (via_rule
+    "D5_2" "via0-D5_2"
+  )
+  (via_rule
+    "D6_2" "via0-D6_2"
+  )
+  (via_rule
+    "D7_2" "via0-D7_2"
+  )
+  (via_rule
+    "D8_2" "via0-D8_2"
+  )
+  (via_rule
+    "D9_2" "via0-D9_2"
+  )
+  (via_rule
+    "D10_2" "via0-D10_2"
+  )
+  (via_rule
+    "D11_2" "via0-D11_2"
+  )
+  (via_rule
+    "D12_2" "via0-D12_2"
+  )
+  (via_rule
+    "D13_2" "via0-D13_2"
+  )
+  (via_rule
+    "D14_2" "via0-D14_2"
+  )
+  (via_rule
+    "D15_2" "via0-D15_2"
+  )
+  (via_rule
+    "D16_2" "via0-D16_2"
+  )
+  (via_rule
+    "D17_2" "via0-D17_2"
+  )
+  (via_rule
+    "D18_2" "via0-D18_2"
+  )
+  (via_rule
+    "D19_2" "via0-D19_2"
+  )
+  (via_rule
+    "D20_2" "via0-D20_2"
+  )
+  (via_rule
+    "D21_2" "via0-D21_2"
+  )
+  (via_rule
+    "D22_2" "via0-D22_2"
+  )
+  (via_rule
+    "D23_2" "via0-D23_2"
+  )
+  (via_rule
+    "D24_2" "via0-D24_2"
+  )
+  (via_rule
+    "D25_2" "via0-D25_2"
+  )
+  (via_rule
+    "D26_2" "via0-D26_2"
+  )
+  (via_rule
+    "D27_2" "via0-D27_2"
+  )
+  (via_rule
+    "D28_2" "via0-D28_2"
+  )
+  (via_rule
+    "D29_2" "via0-D29_2"
+  )
+  (via_rule
+    "D30_2" "via0-D30_2"
+  )
+  (via_rule
+    "D31_2" "via0-D31_2"
+  )
+  (via_rule
+    "D32_2" "via0-D32_2"
+  )
+  (via_rule
+    "D33_2" "via0-D33_2"
+  )
+  (via_rule
+    "D34_2" "via0-D34_2"
+  )
+  (via_rule
+    "D35_2" "via0-D35_2"
+  )
+  (via_rule
+    "D36_2" "via0-D36_2"
+  )
+  (via_rule
+    "D37_2" "via0-D37_2"
+  )
+  (via_rule
+    "D38_2" "via0-D38_2"
+  )
+  (via_rule
+    "D39_2" "via0-D39_2"
+  )
+  (via_rule
+    "D40_2" "via0-D40_2"
+  )
+  (via_rule
+    "D41_2" "via0-D41_2"
+  )
+  (via_rule
+    "D42_2" "via0-D42_2"
+  )
+  (via_rule
+    "D43_2" "via0-D43_2"
+  )
+  (via_rule
+    "D44_2" "via0-D44_2"
+  )
+  (via_rule
+    "D45_2" "via0-D45_2"
+  )
+  (via_rule
+    "D46_2" "via0-D46_2"
+  )
+  (via_rule
+    "D47_2" "via0-D47_2"
+  )
+  (via_rule
+    "D48_2" "via0-D48_2"
+  )
+  (via_rule
+    "D49_2" "via0-D49_2"
+  )
+  (via_rule
+    "D50_2" "via0-D50_2"
+  )
+  (via_rule
+    "D51_2" "via0-D51_2"
+  )
+  (via_rule
+    "D52_2" "via0-D52_2"
+  )
+  (via_rule
+    "D53_2" "via0-D53_2"
+  )
+  (via_rule
+    "D54_2" "via0-D54_2"
+  )
+  (via_rule
+    "D55_2" "via0-D55_2"
+  )
+  (via_rule
+    "D56_2" "via0-D56_2"
+  )
+  (via_rule
+    "D57_2" "via0-D57_2"
+  )
+  (via_rule
+    "D58_2" "via0-D58_2"
+  )
+  (via_rule
+    "D59_2" "via0-D59_2"
+  )
+  (via_rule
+    "D60_2" "via0-D60_2"
+  )
+  (via_rule
+    "D61_2" "via0-D61_2"
+  )
+  (via_rule
+    "D62_2" "via0-D62_2"
+  )
+  (via_rule
+    "D63_2" "via0-D63_2"
+  )
+  (via_rule
+    "D64_2" "via0-D64_2"
+  )
+  (via_rule
+    "D65_2" "via0-D65_2"
+  )
+  (via_rule
+    "D66_2" "via0-D66_2"
+  )
+  (via_rule
+    "D67_2" "via0-D67_2"
+  )
+  (via_rule
+    "D68_2" "via0-D68_2"
+  )
+  (via_rule
+    "D69_2" "via0-D69_2"
+  )
+  (via_rule
+    "D70_2" "via0-D70_2"
+  )
+  (via_rule
+    "D71_2" "via0-D71_2"
+  )
+  (via_rule
+    "D72_2" "via0-D72_2"
+  )
+  (via_rule
+    "D73_2" "via0-D73_2"
+  )
+  (via_rule
+    "D74_2" "via0-D74_2"
+  )
+  (via_rule
+    "D75_2" "via0-D75_2"
+  )
+  (via_rule
+    "D76_2" "via0-D76_2"
+  )
+  (via_rule
+    "D77_2" "via0-D77_2"
+  )
+  (via_rule
+    "D78_2" "via0-D78_2"
+  )
+  (via_rule
+    "D79_2" "via0-D79_2"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 1.004)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "SW80_2"
+    "SW80_2"
+    (clearance_class "SW80_2")
+    (via_rule "SW80_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class ROW4
+    ROW4
+    (clearance_class ROW4)
+    (via_rule ROW4)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class GND
+    GND
+    (clearance_class GND)
+    (via_rule GND)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class VCC
+    VCC
+    (clearance_class VCC)
+    (via_rule VCC)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL17
+    COL17
+    (clearance_class COL17)
+    (via_rule COL17)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL16
+    COL16
+    (clearance_class COL16)
+    (via_rule COL16)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL15
+    COL15
+    (clearance_class COL15)
+    (via_rule COL15)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL14
+    COL14
+    (clearance_class COL14)
+    (via_rule COL14)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL13
+    COL13
+    (clearance_class COL13)
+    (via_rule COL13)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL12
+    COL12
+    (clearance_class COL12)
+    (via_rule COL12)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL11
+    COL11
+    (clearance_class COL11)
+    (via_rule COL11)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL10
+    COL10
+    (clearance_class COL10)
+    (via_rule COL10)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL9
+    COL9
+    (clearance_class COL9)
+    (via_rule COL9)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL8
+    COL8
+    (clearance_class COL8)
+    (via_rule COL8)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL7
+    COL7
+    (clearance_class COL7)
+    (via_rule COL7)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL6
+    COL6
+    (clearance_class COL6)
+    (via_rule COL6)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL5
+    COL5
+    (clearance_class COL5)
+    (via_rule COL5)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL4
+    COL4
+    (clearance_class COL4)
+    (via_rule COL4)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL3
+    COL3
+    (clearance_class COL3)
+    (via_rule COL3)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL2
+    COL2
+    (clearance_class COL2)
+    (via_rule COL2)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL1
+    COL1
+    (clearance_class COL1)
+    (via_rule COL1)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class COL0
+    COL0
+    (clearance_class COL0)
+    (via_rule COL0)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class ROW3
+    ROW3
+    (clearance_class ROW3)
+    (via_rule ROW3)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class ROW2
+    ROW2
+    (clearance_class ROW2)
+    (via_rule ROW2)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class ROW1
+    ROW1
+    (clearance_class ROW1)
+    (via_rule ROW1)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class ROW0
+    ROW0
+    (clearance_class ROW0)
+    (via_rule ROW0)
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "SW1_2"
+    "SW1_2"
+    (clearance_class "SW1_2")
+    (via_rule "SW1_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D2_2"
+    "D2_2"
+    (clearance_class "D2_2")
+    (via_rule "D2_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D3_2"
+    "D3_2"
+    (clearance_class "D3_2")
+    (via_rule "D3_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D4_2"
+    "D4_2"
+    (clearance_class "D4_2")
+    (via_rule "D4_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D5_2"
+    "D5_2"
+    (clearance_class "D5_2")
+    (via_rule "D5_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D6_2"
+    "D6_2"
+    (clearance_class "D6_2")
+    (via_rule "D6_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D7_2"
+    "D7_2"
+    (clearance_class "D7_2")
+    (via_rule "D7_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D8_2"
+    "D8_2"
+    (clearance_class "D8_2")
+    (via_rule "D8_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D9_2"
+    "D9_2"
+    (clearance_class "D9_2")
+    (via_rule "D9_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D10_2"
+    "D10_2"
+    (clearance_class "D10_2")
+    (via_rule "D10_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D11_2"
+    "D11_2"
+    (clearance_class "D11_2")
+    (via_rule "D11_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D12_2"
+    "D12_2"
+    (clearance_class "D12_2")
+    (via_rule "D12_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D13_2"
+    "D13_2"
+    (clearance_class "D13_2")
+    (via_rule "D13_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D14_2"
+    "D14_2"
+    (clearance_class "D14_2")
+    (via_rule "D14_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D15_2"
+    "D15_2"
+    (clearance_class "D15_2")
+    (via_rule "D15_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D16_2"
+    "D16_2"
+    (clearance_class "D16_2")
+    (via_rule "D16_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D17_2"
+    "D17_2"
+    (clearance_class "D17_2")
+    (via_rule "D17_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D18_2"
+    "D18_2"
+    (clearance_class "D18_2")
+    (via_rule "D18_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D19_2"
+    "D19_2"
+    (clearance_class "D19_2")
+    (via_rule "D19_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D20_2"
+    "D20_2"
+    (clearance_class "D20_2")
+    (via_rule "D20_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D21_2"
+    "D21_2"
+    (clearance_class "D21_2")
+    (via_rule "D21_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D22_2"
+    "D22_2"
+    (clearance_class "D22_2")
+    (via_rule "D22_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D23_2"
+    "D23_2"
+    (clearance_class "D23_2")
+    (via_rule "D23_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D24_2"
+    "D24_2"
+    (clearance_class "D24_2")
+    (via_rule "D24_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D25_2"
+    "D25_2"
+    (clearance_class "D25_2")
+    (via_rule "D25_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D26_2"
+    "D26_2"
+    (clearance_class "D26_2")
+    (via_rule "D26_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D27_2"
+    "D27_2"
+    (clearance_class "D27_2")
+    (via_rule "D27_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D28_2"
+    "D28_2"
+    (clearance_class "D28_2")
+    (via_rule "D28_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D29_2"
+    "D29_2"
+    (clearance_class "D29_2")
+    (via_rule "D29_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D30_2"
+    "D30_2"
+    (clearance_class "D30_2")
+    (via_rule "D30_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D31_2"
+    "D31_2"
+    (clearance_class "D31_2")
+    (via_rule "D31_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D32_2"
+    "D32_2"
+    (clearance_class "D32_2")
+    (via_rule "D32_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D33_2"
+    "D33_2"
+    (clearance_class "D33_2")
+    (via_rule "D33_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D34_2"
+    "D34_2"
+    (clearance_class "D34_2")
+    (via_rule "D34_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D35_2"
+    "D35_2"
+    (clearance_class "D35_2")
+    (via_rule "D35_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D36_2"
+    "D36_2"
+    (clearance_class "D36_2")
+    (via_rule "D36_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D37_2"
+    "D37_2"
+    (clearance_class "D37_2")
+    (via_rule "D37_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D38_2"
+    "D38_2"
+    (clearance_class "D38_2")
+    (via_rule "D38_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D39_2"
+    "D39_2"
+    (clearance_class "D39_2")
+    (via_rule "D39_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D40_2"
+    "D40_2"
+    (clearance_class "D40_2")
+    (via_rule "D40_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D41_2"
+    "D41_2"
+    (clearance_class "D41_2")
+    (via_rule "D41_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D42_2"
+    "D42_2"
+    (clearance_class "D42_2")
+    (via_rule "D42_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D43_2"
+    "D43_2"
+    (clearance_class "D43_2")
+    (via_rule "D43_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D44_2"
+    "D44_2"
+    (clearance_class "D44_2")
+    (via_rule "D44_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D45_2"
+    "D45_2"
+    (clearance_class "D45_2")
+    (via_rule "D45_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D46_2"
+    "D46_2"
+    (clearance_class "D46_2")
+    (via_rule "D46_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D47_2"
+    "D47_2"
+    (clearance_class "D47_2")
+    (via_rule "D47_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D48_2"
+    "D48_2"
+    (clearance_class "D48_2")
+    (via_rule "D48_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D49_2"
+    "D49_2"
+    (clearance_class "D49_2")
+    (via_rule "D49_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D50_2"
+    "D50_2"
+    (clearance_class "D50_2")
+    (via_rule "D50_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D51_2"
+    "D51_2"
+    (clearance_class "D51_2")
+    (via_rule "D51_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D52_2"
+    "D52_2"
+    (clearance_class "D52_2")
+    (via_rule "D52_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D53_2"
+    "D53_2"
+    (clearance_class "D53_2")
+    (via_rule "D53_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D54_2"
+    "D54_2"
+    (clearance_class "D54_2")
+    (via_rule "D54_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D55_2"
+    "D55_2"
+    (clearance_class "D55_2")
+    (via_rule "D55_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D56_2"
+    "D56_2"
+    (clearance_class "D56_2")
+    (via_rule "D56_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D57_2"
+    "D57_2"
+    (clearance_class "D57_2")
+    (via_rule "D57_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D58_2"
+    "D58_2"
+    (clearance_class "D58_2")
+    (via_rule "D58_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D59_2"
+    "D59_2"
+    (clearance_class "D59_2")
+    (via_rule "D59_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D60_2"
+    "D60_2"
+    (clearance_class "D60_2")
+    (via_rule "D60_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D61_2"
+    "D61_2"
+    (clearance_class "D61_2")
+    (via_rule "D61_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D62_2"
+    "D62_2"
+    (clearance_class "D62_2")
+    (via_rule "D62_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D63_2"
+    "D63_2"
+    (clearance_class "D63_2")
+    (via_rule "D63_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D64_2"
+    "D64_2"
+    (clearance_class "D64_2")
+    (via_rule "D64_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D65_2"
+    "D65_2"
+    (clearance_class "D65_2")
+    (via_rule "D65_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D66_2"
+    "D66_2"
+    (clearance_class "D66_2")
+    (via_rule "D66_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D67_2"
+    "D67_2"
+    (clearance_class "D67_2")
+    (via_rule "D67_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D68_2"
+    "D68_2"
+    (clearance_class "D68_2")
+    (via_rule "D68_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D69_2"
+    "D69_2"
+    (clearance_class "D69_2")
+    (via_rule "D69_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D70_2"
+    "D70_2"
+    (clearance_class "D70_2")
+    (via_rule "D70_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D71_2"
+    "D71_2"
+    (clearance_class "D71_2")
+    (via_rule "D71_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D72_2"
+    "D72_2"
+    (clearance_class "D72_2")
+    (via_rule "D72_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D73_2"
+    "D73_2"
+    (clearance_class "D73_2")
+    (via_rule "D73_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D74_2"
+    "D74_2"
+    (clearance_class "D74_2")
+    (via_rule "D74_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D75_2"
+    "D75_2"
+    (clearance_class "D75_2")
+    (via_rule "D75_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D76_2"
+    "D76_2"
+    (clearance_class "D76_2")
+    (via_rule "D76_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D77_2"
+    "D77_2"
+    (clearance_class "D77_2")
+    (via_rule "D77_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D78_2"
+    "D78_2"
+    (clearance_class "D78_2")
+    (via_rule "D78_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+  (class "D79_2"
+    "D79_2"
+    (clearance_class "D79_2")
+    (via_rule "D79_2")
+    (rule
+      (width 1.0)
+    )
+    (circuit 
+      (use_layer 1 2)
+    )
+  )
+)
