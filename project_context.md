@@ -27,7 +27,7 @@
 - **ZMK 已 pin** 到 commit ff09f2d（2026-06-07，Zephyr v4.1.0+zmk-fixes；注意该 Zephyr 里 kscan 子系统已标 DEPRECATED）。
 - **两级 kscan 驱动**（`twotier` 分支，自定义 out-of-tree 模块，raw I²C 接管两片 MCP23017）：ACTIVE 全扫 5ms=stock手感；IDLE 超时 750ms 后全行拉低做"摘要读"@80ms ≈ 0.4mA；按键唤醒。目标=poll80 的电 + stock 的手感。文件：`drivers/kscan/kscan_akii_twotier.c` + `dts/bindings/kscan/zmk,kscan-akii-twotier.yaml` + `zephyr/module.yml`+`CMakeLists.txt`+`Kconfig`（模块插桩）。
 - **质量过程**：7 维多智能体对抗审查（抓到 LOG_WARN→LOG_WRN）→ CI 终检（抓到 `select KSCAN` 触发 Kconfig 递归，改 `depends on KSCAN`）→ **编译通过**。
-- **firmware/ 里的 uf2**：akii-stock/poll30/poll50/poll80（一级实验）；**akii-twotier.uf2**=日常(Studio)；**akii-bringup.uf2**=带 USB 日志(DBG)用于 `tools/matrix_test.py` 逐键验证。
+- **firmware/ 里的 uf2**：**akii-twotier.uf2**=日常(Studio)；**akii-bringup.uf2**=带 USB 日志(DBG)用于 `tools/matrix_test.py` 逐键验证。（早期一级实验 uf2 akii-stock/poll30/50/80 已清理,无用;实验结论见上方"省电/两级 kscan"小节。）
 - **真机验收已过（2026-06）**：matrix_test.py 全 90 键位通过；**打字 1.5mA / 静止 idle 0.57mA**（2000mAh ≈ ~5 个月待机），手感=stock、删除跟手、蓝牙常连、按键即时。两级切换实测可见(按住键 1.5mA、松手 750ms 后掉 0.57)。
 - **QSPI flash 省电——全部试到底,此路不通,别再碰**：
   - `&qspi status=disabled`(overlay)= no-op(被板级 xiao_ble_zmk.dts 的 `&qspi okay` 覆盖,binary 没变,MD5 验证过)。
