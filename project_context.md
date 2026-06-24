@@ -25,7 +25,7 @@
 ## 🔋 省电 / 两级 kscan 驱动（2026-06）
 - **基线实测（2000mAh，纯空闲待机）**：stock ~1.5-1.6mA(~52天)；poll30 ~0.7-0.86mA(~3.5月,流畅)；poll50 ~0.5-0.8mA(删除发滞)；poll80 ~0.4mA(明显延迟)。慢轮询全局赢不了"省电 vs 手感"权衡。
 - **ZMK 已 pin** 到 commit ff09f2d（2026-06-07，Zephyr v4.1.0+zmk-fixes；注意该 Zephyr 里 kscan 子系统已标 DEPRECATED）。
-- **两级 kscan 驱动**（`twotier` 分支，自定义 out-of-tree 模块，raw I²C 接管两片 MCP23017）：ACTIVE 全扫 5ms=stock手感；IDLE 超时 750ms 后全行拉低做"摘要读"@80ms ≈ 0.4mA；按键唤醒。目标=poll80 的电 + stock 的手感。文件：`drivers/kscan/kscan_akii_twotier.c` + `dts/bindings/kscan/zmk,kscan-akii-twotier.yaml` + `zephyr/module.yml`+`CMakeLists.txt`+`Kconfig`（模块插桩）。
+- **两级 kscan 驱动**（`twotier` 分支，自定义 out-of-tree 模块，raw I²C 接管两片 MCP23017）：ACTIVE 全扫 5ms=stock手感；IDLE 超时 750ms 后全行拉低做"摘要读"@80ms(后调 25ms,见收尾)≈ 0.4mA；按键唤醒。目标=poll80 的电 + stock 的手感。文件：`drivers/kscan/kscan_akii_twotier.c` + `dts/bindings/kscan/zmk,kscan-akii-twotier.yaml` + `zephyr/module.yml`+`CMakeLists.txt`+`Kconfig`（模块插桩）。
 - **质量过程**：7 维多智能体对抗审查（抓到 LOG_WARN→LOG_WRN）→ CI 终检（抓到 `select KSCAN` 触发 Kconfig 递归，改 `depends on KSCAN`）→ **编译通过**。
 - **firmware/ 里的 uf2**：**akii-twotier.uf2**=日常(Studio)；**akii-bringup.uf2**=带 USB 日志(DBG)用于 `tools/matrix_test.py` 逐键验证。（早期一级实验 uf2 akii-stock/poll30/50/80 已清理,无用;实验结论见上方"省电/两级 kscan"小节。）
 - **真机验收已过（2026-06）**：matrix_test.py 全 90 键位通过；**打字 1.5mA / 静止 idle 0.57mA**（2000mAh ≈ ~5 个月待机），手感=stock、删除跟手、蓝牙常连、按键即时。两级切换实测可见(按住键 1.5mA、松手 750ms 后掉 0.57)。
@@ -36,7 +36,7 @@
   - **结论:保留 stock QSPI 驱动不动。0.57mA 里大头是 nRF/BLE idle 底 + 两片 MCP23017,flash 已在 standby。**
 - **深睡(System OFF, ~2µA)**:要飞 INT 线 + 唤醒重连蓝牙(~1-3s 丢首击),不划算,**放弃**。
 - **DC/DC 已开**:xiao_ble DT `&reg1 regulator-initial-mode=DCDC`,这个杠杆本来就在省了。**0.57mA 是这块硬件(蓝牙常连+不深睡)的真地板,所有杠杆探尽。**
-- **✅ 已收工（2026-06）**：`twotier` 已合进 `main`,两级驱动为日常固件。日常刷 `akii-twotier.uf2`(md5 14cb95d7)。idle/active/timeout 周期在 overlay kscan0 节点可调(默认 80/5/750ms)。最终成绩:**0.57mA idle / ~5 月待机 / stock 手感 / 蓝牙常连 / 全键位**。
+- **✅ 已收工（2026-06）**：`twotier` 已合进 `main`,两级驱动为日常固件。日常刷 `akii-twotier.uf2`(md5 663ede82,2026-06-24 重构)。idle/active/timeout 周期在 overlay kscan0 节点可调(**默认 25**/5/750ms;原 80,2026-06-24 把 idle-poll 降到 25ms 让"停顿后第一下"更跟手——idle 那下仅单次列读,功耗增量可忽略、未单独实测)。最终成绩:**~0.57mA idle(80ms 实测,25ms 略高) / ~5 月待机 / stock 手感 / 蓝牙常连 / 全键位**。
 
 ## 🔧 外壳/固定件阶段（进行中，电子部分已完结）
 - **思路**:复用原版 AKII 外壳自带的 **3 个锥形螺柱(一排,底径 6mm)** 当定位点(那个孔本是定位钢板用的,我们只借位、不占)。打印件做"托盘":顶面平台坐控制器板,板背 PH2.0(~5.1mm)落进挖穿的凹槽,底铺平、留走线。
