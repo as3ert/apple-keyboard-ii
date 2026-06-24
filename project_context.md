@@ -36,7 +36,8 @@
   - **结论:保留 stock QSPI 驱动不动。0.57mA 里大头是 nRF/BLE idle 底 + 两片 MCP23017,flash 已在 standby。**
 - **深睡(System OFF, ~2µA)**:要飞 INT 线 + 唤醒重连蓝牙(~1-3s 丢首击),不划算,**放弃**。
 - **DC/DC 已开**:xiao_ble DT `&reg1 regulator-initial-mode=DCDC`,这个杠杆本来就在省了。**0.57mA 是这块硬件(蓝牙常连+不深睡)的真地板,所有杠杆探尽。**
-- **✅ 已收工（2026-06）**：`twotier` 已合进 `main`,两级驱动为日常固件。日常刷 `akii-twotier.uf2`(md5 663ede82,2026-06-24 重构)。idle/active/timeout 周期在 overlay kscan0 节点可调(**默认 25**/5/750ms;原 80,2026-06-24 把 idle-poll 降到 25ms 让"停顿后第一下"更跟手——idle 那下仅单次列读,功耗增量可忽略、未单独实测)。最终成绩:**~0.57mA idle(80ms 实测,25ms 略高) / ~5 月待机 / stock 手感 / 蓝牙常连 / 全键位**。
+- **✅ 已收工（2026-06）**：`twotier` 已合进 `main`,两级驱动为日常固件。日常刷 `akii-twotier.uf2`(md5 67b19b0d,2026-06-24 重构=idle-poll 25ms + BLE TX +8dBm)。idle/active/timeout 周期在 overlay kscan0 节点可调(**默认 25**/5/750ms;原 80,2026-06-24 把 idle-poll 降到 25ms 让"停顿后第一下"更跟手——idle 那下仅单次列读,功耗增量可忽略、未单独实测)。最终成绩:**~0.57mA idle(80ms 实测,25ms 略高) / ~5 月待机 / stock 手感 / 蓝牙常连 / 全键位**。
+- **BLE +8dBm（2026-06-24 加）**：`CONFIG_BT_CTLR_TX_PWR_PLUS_8=y`（在 `config/akii.conf`）。治"按一下出一串"的**偶发**连按——BLE 把 key-up(release) 丢了→主机当成长按一直重复(`appppp`)。加大上行功率让 release 不易丢;仅发射时略耗电、idle 不变。**偶发问题需正常用几天看是否减少**,配合"坞挪远 / USB3 线加磁环 / 电别太低"更稳。
 
 ## 🔧 外壳/固定件阶段（进行中，电子部分已完结）
 - **思路**:复用原版 AKII 外壳自带的 **3 个锥形螺柱(一排,底径 6mm)** 当定位点(那个孔本是定位钢板用的,我们只借位、不占)。打印件做"托盘":顶面平台坐控制器板,板背 PH2.0(~5.1mm)落进挖穿的凹槽,底铺平、留走线。
